@@ -101,13 +101,13 @@ namespace DoomCounter.Models
                 }
                 else
                 {
-                    UserInteraction.DisplayInvalidAnswerMessage(userAnswer);
+                    DisplayInvalidAnswerMessage(userAnswer);
                 }
 
-                userAnswer = UserInteraction.GetUserInput();
+                userAnswer = GetUserInput();
                 isFirstAsk = false;
 
-                if (UserInteraction.IsAcceptedAnswer(userAnswer))
+                if (IsAcceptedAnswer(userAnswer))
                 {
                     doomCounter.IncrementCounter();
                     HandleDoomMessages(doomCounter.GetCounter());
